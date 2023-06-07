@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Calculadora de Fatorial</title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h2 class="row justify-content-center"> Calculadora de Fatorial</h2>
+        <script>
+            function calculaFatorial(){
+                const N = document.getElementById("N").value;
+                let fatorial = 1;
+                for (let cont = 1; cont <= N; cont++){
+                fatorial *= cont;
+                }
+                document.getElementById("resultado").innerHTML = "O fatorial do número inserido é: "+fatorial;
+            }
+        </script>
+
+        <form>
+            <label for="N">Insira o número desejado:</label>
+            <input class="form-control" type="number" id="N" name="N" value="0"><br>
+        </form>
+
+        <button onclick="calculaFatorial()"> Calcular fatorial </button><br><br>
+
+        <p id="resultado"> </p>
+    </div>
+</body>
+git remote add origin https://github.com/pietropeixoto/calculadora-de-fatorial.git
+ git branch -M main 
+git push -u origin main
+</html>
